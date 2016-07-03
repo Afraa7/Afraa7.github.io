@@ -1,6 +1,10 @@
 /**
  * Fonts
  */
+ 
+ *{
+ 	margin:0;
+ }
 @font-face {
   font-family: 'SegoeUI-Bold';
   font-weight: normal;
