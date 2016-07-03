@@ -1,0 +1,543 @@
+/**
+ * Fonts
+ */
+@font-face {
+  font-family: 'SegoeUI-Bold';
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SegoeUI-Light';
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SegoeUI';
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SegoeUI-SemiBold';
+  font-weight: normal;
+  font-style: normal;
+}
+/**
+ * Base/General
+ **/
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'SegoeUI', serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: #fff;
+  background: white;
+}
+
+.container {
+  width: 100%;
+}
+.container::after {
+  content: "";
+  display: table;
+  clear: both;
+  overflow: visible;
+}
+
+.wrapper {
+  width: 1170px;
+  margin: 0 auto;
+}
+.wrapper::after {
+  content: "";
+  display: table;
+  clear: both;
+  overflow: visible;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  outline: none;
+}
+
+.submit-button:hover {
+  color: #D9B611;
+  border-color: #D9B611;
+  font-family: "SegoeUI-Bold", serif;
+  font-size: 1em;
+  background-color: white;
+}
+.submit-button {
+  color: #fff;
+  background-color: #D9B611;
+  border-color: #D9B611;
+  min-width: 31.62393%;
+  padding: 16px 38px;
+  text-transform: uppercase;
+    border: 2px solid white;
+	
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'SegoeUI-Light', serif;
+  font-size: 2.14286em;
+  color: #515f67;
+  text-transform: uppercase;
+}
+h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
+  content: "";
+  display: block;
+  margin-top: 8px;
+  width: 45px;
+  height: 2px;
+  background: #26C281;
+}
+
+h2 {
+  font-family: "SegoeUI-SemiBold", serif;
+  font-size: 1.71429em;
+}
+h2::after {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.navigation .nav-menu {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.navigation .nav-item {
+  display: inline-block;
+  margin-left: 20px;
+}
+.navigation .nav-item a {
+  display: block;
+  position: relative;
+  padding: 11px 18px;
+  font-family: 'SegoeUI-Bold', serif;
+  font-size: 1em;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.navigation .nav-item a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #D9B611;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.navigation .nav-item:hover a, .navigation .nav-item.current a {
+  color: #D9B611;
+}
+.navigation .nav-item:hover a::after, .navigation .nav-item.current a::after {
+  opacity: 1;
+}
+
+form {
+  font-family: "SegoeUI-SemiBold", serif;
+  font-size: 1em;
+}
+form input[type=text],
+form input[type=email],
+form textarea,
+form label {
+  font-family: "SegoeUI-Light", serif;
+  font-size: 1em;
+  background: transparent;
+  display: block;
+  color: #fff;
+}
+form input[type=text],
+form input[type=email],
+form textarea {
+  border: 2px solid #fff;
+  padding: 18px 20px;
+  font-size: 1.28571em;
+  width: 100%;
+  margin-bottom: 38px;
+  resize: none;
+}
+form input[type=text]:focus,
+form input[type=email]:focus,
+form textarea:focus {
+  outline: none;
+}
+form label {
+  font-family: "SegoeUI-Bold", serif;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+form .top-section::after {
+  content: "";
+  display: table;
+  clear: both;
+  overflow: visible;
+}
+form fieldset:first-child {
+  width: 40.17094%;
+  float: left;
+}
+form .contact-info {
+  width: 48.71795%;
+  float: right;
+}
+
+/**
+ * Header
+ **/
+.page-header {
+  height: 150px;
+  background: #006442;
+}
+.page-header .site-logo {
+  font-family: 'SegoeUI-Bold', serif;
+  color: #fff;
+  text-transform: uppercase;
+  padding-top: 65px;
+  float: left;
+}
+.page-header .site-logo span {
+  color: #D9B611;
+}
+.page-header .site-logo::after {
+  display: none;
+}
+.page-header .main-navigation {
+  padding-top: 65px;
+  float: right;
+}
+
+/**
+ * Sections
+ **/
+.section {
+  position: relative;
+  padding: 80px 0;
+  background: #1abc9c;
+}
+.section .section-title {
+  margin-bottom: 30px;
+  color: #fff;
+}
+.section .section-title::after {
+  background-color: #fff;
+}
+.section .section-content p {
+  font-size: 1em;
+  line-height: 1.71429em;
+  margin-bottom: 30px;
+}
+.section .section-content::before, .section .section-content::after {
+  content: "";
+  display: table;
+  clear: both;
+  overflow: visible;
+}
+.section .section-wrapper {
+  float: left;
+  width: 42.73504%;
+  margin-right: 70px;
+}
+.section .embed-container {
+  float: right;
+  width: 48.71795%;
+}
+
+#home {
+  height: 650px;
+  background: transparent;
+}
+#home .headlines {
+  font-family: "SegoeUI-Light", serif;
+  font-size: 3em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 170px;
+  color: #D9B611;
+}
+#home .headlines span {
+  display: inline-block;
+  padding: 18px 22px;
+  margin-bottom: 14px;
+}
+
+#interests {
+  background-color: #F58F84;
+}
+#interests .section-title {
+  color: #fff;
+}
+#interests .section-title::after {
+  background-color: white;
+}
+
+#interests .service {
+  float: left;
+  width: 23.07692%;
+  min-height: 180px;
+  margin-right: 30px;
+}
+#interests .service .service-title {
+  margin-bottom: 18px;
+  color: #FFFFFF;
+}
+
+#interests .service:last-child {
+  margin-right: auto;
+}
+#interests .service:hover::before {
+  margin-left: 40%;
+}
+#interests .service::before {
+  -webkit-transition: margin 0.5s;
+  transition: margin 0.5s;
+  content: "";
+  display: block;
+  height: 48px;
+  width: 48px;
+  margin-bottom: 24px;
+}
+#interests .service.service-html::before {
+  width: 34px;
+  background-position: 0 0;
+}
+#interests .service.service-CSS::before {
+  background-position: -34px 0;
+}
+#interests .service.service-javascript::before {
+  background-position: -82px 0;
+  width: 47px;
+}
+#interests .service.service-java::before {
+  background-position: -129px 0;
+}
+
+#portfolio {
+  background: white;
+}
+#portfolio .section-title {
+  float: left;
+  color: #515f67;
+}
+#portfolio .section-title::after {
+  background-color: #515f67;
+}
+#portfolio .portfolio-navigation {
+  float: right;
+}
+#portfolio .portfolio-navigation .nav-item:first-child {
+  margin-left: auto;
+}
+#portfolio .portfolio-navigation .nav-item a {
+  font-size: 1em;
+  color: #515f67;
+}
+#portfolio .portfolio-navigation .nav-item:hover a, #portfolio .portfolio-navigation .nav-item.current a {
+  color: #D9B611;
+}
+#portfolio .portfolio-list:after {
+  content: '';
+  display: table;
+  clear: both;
+  overflow: visible;
+}
+#portfolio .portfolio-list .portfolio-item {
+  float: left;
+  width: 23.07692%;
+  height: 270px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+#portfolio .portfolio-list .portfolio-item a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+#portfolio .portfolio-list .portfolio-item a::before {
+  content: "+";
+  font-family: "SegoeUI-Light", serif;
+  font-size: 5.14286em;
+  text-align: center;
+  line-height: 0;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 135px;
+  background: rgba(53, 63, 71, 0.9);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+#portfolio .portfolio-list .portfolio-item a:hover::before {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+#portfolio .portfolio-list .portfolio-item img {
+  width: 100%;
+  vertical-align: middle;
+}
+#portfolio .portfolio-list .portfolio-item:nth-child(4n) {
+  margin-right: auto;
+}
+
+
+#aboutme {
+  background-color: #fff;
+}
+#aboutme .wrapper {
+  position: relative;
+}
+#aboutme .wrapper::before {
+  content: "";
+  font-family: 'Bitter', serif;
+  font-size: 5.14286em;
+  color: #515f67;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#aboutme .section-title,
+#aboutme .section-content {
+  color: #515f67;
+}
+#aboutme .section-title::after {
+  background-color: #515f67;
+}
+#aboutme .section-content {
+  font-family: "SegoeUI-Light", serif;
+    font-size: 2em;
+  line-height: 2em;
+  margin-bottom: 30px;
+}
+
+#interests .section-content {
+  font-family: "SegoeUI-Light", serif;
+    font-size: 2em;
+  line-height: 2em;
+  margin-bottom: 30px;
+}
+
+#aboutme .section-content .email {
+  font-family: "SegoeUI-Bold", serif;
+  color: #D9B611;
+  font-size: 1em;
+}
+
+
+#contact {
+  position: relative;
+}
+#contact::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+/**
+* Footer
+**/
+.page-footer {
+  height: 170px;
+  padding-top: 80px;
+  background: white;
+}
+
+.footer-navigation {
+  float: left;
+}
+.footer-navigation .nav-item {
+  margin-left: 0;
+}
+.footer-navigation .nav-item a {
+  font-family: "SegoeUI-SemiBold", serif;
+  font-size: 0.85714em;
+  color: #515f67;
+  display: inline-block;
+  padding: 0;
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+.footer-navigation .nav-item a::after {
+  content: "|";
+  display: inline-block;
+  vertical-align: 18%;
+  position: static;
+  top: auto;
+  left: auto;
+  width: auto;
+  border: none;
+  padding: 0 15px;
+  -webkit-transition: none !important;
+  transition: none !important;
+  opacity: 1;
+}
+.footer-navigation .nav-item:last-child a::after {
+  content: "";
+  width: 0;
+  padding: 0;
+}
+.footer-navigation .nav-item:hover a, .footer-navigation .nav-item.current a {
+  color: #D9B611;
+}
+.footer-navigation .nav-item:hover a::after, .footer-navigation .nav-item.current a::after {
+  color: #D9B611;
+}
+
+ul.topnav li.icon {display: none;}
+
+@media screen and (max-width:680px) {
+  ul.nav-menu li:not(:first-child) {display: none;}
+  ul.nav-menu li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+@media screen and (max-width:680px) {
+  ul.nav-menu .responsive {position: relative;}
+  ul.nav-menu .responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.nav-menu .responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.nav-menu .responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
