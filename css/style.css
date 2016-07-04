@@ -219,7 +219,7 @@ form .contact-info {
   float: left;
 }
 .page-header .site-logo span {
-  color: #D9B611;
+  color: #1abc9c;
 }
 .page-header .site-logo::after {
   display: none;
@@ -281,7 +281,7 @@ form .contact-info {
   display: inline-block;
   padding: 18px 22px;
   margin-bottom: 14px;
-  color: #D9B611;
+  color: #1abc9c;
 }
 
 #interests {
