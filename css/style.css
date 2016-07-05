@@ -1,9 +1,12 @@
-/**
- * Fonts
- */
- *{
- 	margin:0;
- }
+/*General Page Styles
+======================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
 @font-face {
   font-family: 'SegoeUI-Bold';
   font-weight: normal;
@@ -32,6 +35,64 @@
 }
 
 
+
+/**
+ * Base/General
+ **/
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+form {
+  font-family: "SegoeUI-SemiBold", serif;
+  font-size: 1em;
+}
+form input[type=text],
+form input[type=email],
+form textarea,
+form label {
+  font-family: "SegoeUI-Light", serif;
+  font-size: 1em;
+  background: transparent;
+  display: block;
+  color: #fff;
+}
+form input[type=text],
+form input[type=email],
+form textarea {
+  border: 2px solid #fff;
+  padding: 18px 20px;
+  font-size: 1.28571em;
+  width: 100%;
+  margin-bottom: 38px;
+  resize: none;
+}
+form input[type=text]:focus,
+form input[type=email]:focus,
+form textarea:focus {
+  outline: none;
+}
+form label {
+  font-family: "SegoeUI-Bold", serif;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+form .top-section::after {
+  content: "";
+  display: table;
+  clear: both;
+  overflow: visible;
+}
+form fieldset:first-child {
+  width: 40.17094%;
+  float: left;
+}
+form .contact-info {
+  width: 48.71795%;
+  float: right;
+}
+
+
 body {
   font-family: 'SegoeUI', serif;
   font-size: 14px;
@@ -50,8 +111,13 @@ body {
   overflow: visible;
 }
 
+.page-header {
+  overflow: auto;
+  zoom: 1;
+}
+
 .wrapper {
-  width: 1170px;
+  width: 100%;
   margin: 0 auto;
 }
 .wrapper::after {
@@ -110,6 +176,7 @@ h2::after {
   display: none;
 }
 
+
 .hidden {
   display: none;
 }
@@ -155,61 +222,53 @@ h2::after {
   opacity: 1;
 }
 
-form {
-  font-family: "SegoeUI-SemiBold", serif;
-  font-size: 1em;
-}
-form input[type=text],
-form input[type=email],
-form textarea,
-form label {
-  font-family: "SegoeUI-Light", serif;
-  font-size: 1em;
-  background: transparent;
-  display: block;
-  color: #fff;
-}
-form input[type=text],
-form input[type=email],
-form textarea {
-  border: 2px solid #fff;
-  padding: 18px 20px;
-  font-size: 1.28571em;
+/*Navbar Styles
+========================*/
+header {
   width: 100%;
-  margin-bottom: 38px;
-  resize: none;
+  position: fixed;
+  background-color: #ffffff;
+  top: 0;
+  z-index: 1111;
 }
-form input[type=text]:focus,
-form input[type=email]:focus,
-form textarea:focus {
-  outline: none;
+header:hover{
+  opacity: 1;
 }
-form label {
-  font-family: "SegoeUI-Bold", serif;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-form .top-section::after {
-  content: "";
-  display: table;
-  clear: both;
-  overflow: visible;
-}
-form fieldset:first-child {
-  width: 40.17094%;
-  float: left;
-}
-form .contact-info {
-  width: 48.71795%;
+
+nav {
+  margin:1em .5em .3em 0;
+  display: inline;
   float: right;
+  font-size: 1.5em;
+  text-transform: small-caps;
+
+}
+nav ul li {
+  display: inline-block;
+  list-style-type: none;
+}
+.topnav a {
+  letter-spacing: -1px;
+  line-height: 1em;
+  align-self:center;
+  text-decoration: none;
+  margin-right: .7em;
+  color: #333;
+}
+.topnav a:hover {
+  color: #6f2c09;
+  cursor: pointer;
+}
+.icon {
+  display:none;
 }
 
 /**
  * Header
  **/
 .page-header {
-  height: 150px;
-  background: #757D75;
+  height: 140px;
+  background: #16a085;
 }
 .page-header .site-logo {
   font-family: 'SegoeUI-Bold', serif;
@@ -217,6 +276,7 @@ form .contact-info {
   text-transform: uppercase;
   padding-top: 65px;
   float: left;
+  padding-left: 45px
 }
 .page-header .site-logo span {
   color: #1abc9c;
@@ -225,13 +285,15 @@ form .contact-info {
   display: none;
 }
 .page-header .main-navigation {
-  padding-top: 65px;
+  padding-top: 40px;
   float: right;
 }
 
-/**
- * Sections
- **/
+/*Home Section Styles
+===========================*/
+
+/*download fonts awesome for
+the social media icons*/
 .section {
   position: relative;
   padding: 80px 0;
@@ -240,6 +302,7 @@ form .contact-info {
 .section .section-title {
   margin-bottom: 30px;
   color: #fff;
+  
 }
 .section .section-title::after {
   background-color: #fff;
@@ -265,6 +328,17 @@ form .contact-info {
   width: 48.71795%;
 }
 
+.section-title,
+.section-content {
+	padding-left:45px;
+	padding-right: 45px;
+}
+
+  
+
+
+/*Container and About styles
+===============================*/
 #home {
   height: 650px;
   background: transparent;
@@ -276,6 +350,7 @@ form .contact-info {
   text-align: center;
   margin-top: 170px;
   color: #D9B611;
+  padding-top: 73px;
 }
 #home .headlines span {
   display: inline-block;
@@ -284,56 +359,48 @@ form .contact-info {
   color: #1abc9c;
 }
 
-#interests {
-  background-color: #F58F84;
-}
-#interests .section-title {
-  color: #fff;
-}
-#interests .section-title::after {
-  background-color: white;
-}
 
-#interests .service {
-  float: left;
-  width: 23.07692%;
-  min-height: 180px;
-  margin-right: 30px;
-}
-#interests .service .service-title {
-  margin-bottom: 18px;
-  color: #FFFFFF;
-}
 
-#interests .service:last-child {
-  margin-right: auto;
+#aboutme {
+  background-color: #fff;
 }
-#interests .service:hover::before {
-  margin-left: 40%;
+#aboutme .wrapper {
+  position: relative;
 }
-#interests .service::before {
-  -webkit-transition: margin 0.5s;
-  transition: margin 0.5s;
+#aboutme .wrapper::before {
   content: "";
+  font-family: 'Bitter', serif;
+  font-size: 5.14286em;
+  color: #515f67;
   display: block;
-  height: 48px;
-  width: 48px;
-  margin-bottom: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
-#interests .service.service-html::before {
-  width: 34px;
-  background-position: 0 0;
+#aboutme .section-title,
+#aboutme .section-content {
+  color: #515f67;
+
+  
 }
-#interests .service.service-CSS::before {
-  background-position: -34px 0;
+#aboutme .section-title::after {
+  background-color: #515f67;
 }
-#interests .service.service-javascript::before {
-  background-position: -82px 0;
-  width: 47px;
+#aboutme .section-content {
+  font-family: "SegoeUI-Light", serif;
+    font-size: 2em;
+  line-height: 2em;
+  margin-bottom: 30px;
 }
-#interests .service.service-java::before {
-  background-position: -129px 0;
+
+#aboutme .section-content .email {
+  font-family: "SegoeUI-Bold", serif;
+  color: #D9B611;
+  font-size: 1em;
 }
+
+/*Portfolio styles
+============================*/
 
 #portfolio {
   background: white;
@@ -408,38 +475,8 @@ form .contact-info {
 #portfolio .portfolio-list .portfolio-item:nth-child(4n) {
   margin-right: auto;
 }
-
-
-#aboutme {
-  background-color: #fff;
-}
-#aboutme .wrapper {
-  position: relative;
-}
-#aboutme .wrapper::before {
-  content: "";
-  font-family: 'Bitter', serif;
-  font-size: 5.14286em;
-  color: #515f67;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-#aboutme .section-title,
-#aboutme .section-content {
-  color: #515f67;
-}
-#aboutme .section-title::after {
-  background-color: #515f67;
-}
-#aboutme .section-content {
-  font-family: "SegoeUI-Light", serif;
-    font-size: 2em;
-  line-height: 2em;
-  margin-bottom: 30px;
-}
-
+/*Interests section styles
+=========================*/
 #interests .section-content {
   font-family: "SegoeUI-Light", serif;
     font-size: 2em;
@@ -447,12 +484,59 @@ form .contact-info {
   margin-bottom: 30px;
 }
 
-#aboutme .section-content .email {
-  font-family: "SegoeUI-Bold", serif;
-  color: #D9B611;
-  font-size: 1em;
+#interests {
+  background-color: #F58F84;
+}
+#interests .section-title {
+  color: #fff;
+}
+#interests .section-title::after {
+  background-color: white;
 }
 
+#interests .service {
+  float: left;
+  width: 23.07692%;
+  min-height: 180px;
+  margin-right: 30px;
+}
+#interests .service .service-title {
+  margin-bottom: 18px;
+  color: #FFFFFF;
+}
+
+#interests .service:last-child {
+  margin-right: auto;
+}
+#interests .service:hover::before {
+  margin-left: 40%;
+}
+#interests .service::before {
+  -webkit-transition: margin 0.5s;
+  transition: margin 0.5s;
+  content: "";
+  display: block;
+  height: 48px;
+  width: 48px;
+  margin-bottom: 24px;
+}
+#interests .service.service-html::before {
+  width: 34px;
+  background-position: 0 0;
+}
+#interests .service.service-CSS::before {
+  background-position: -34px 0;
+}
+#interests .service.service-javascript::before {
+  background-position: -82px 0;
+  width: 47px;
+}
+#interests .service.service-java::before {
+  background-position: -129px 0;
+}
+
+/*Contact section styles
+==========================*/
 
 #contact {
   position: relative;
@@ -470,6 +554,8 @@ form .contact-info {
   z-index: -1;
 }
 
+/*Footer styles
+==========================*/
 /**
 * Footer
 **/
@@ -520,28 +606,50 @@ form .contact-info {
   color: #D9B611;
 }
 
-ul.topnav li.icon {display: none;}
 
-@media screen and (max-width:680px) {
-  ul.nav-menu li:not(:first-child) {display: none;}
-  ul.nav-menu li.icon {
+
+/*Media Queries
+===========================*/
+@media screen and (max-width:770px) {
+.topnav li{display: none;
+	overflow: hidden;}
+.topnav li.icon {
     float: right;
     display: inline-block;
-  }
-}
-@media screen and (max-width:680px) {
-  ul.nav-menu .responsive {position: relative;}
-  ul.nav-menu .responsive li.icon {
-    position: absolute;
+    font-size: 1.5em;
+    position: fixed;
     right: 0;
     top: 0;
+		overflow: hidden;
   }
-  ul.nav-menu .responsive li {
+  nav {
     float: none;
-    display: inline;
-  }
-  ul.nav-menu .responsive li a {
     display: block;
-    text-align: left;
+    clear: left;
+    padding-top: .5em;
+	overflow: hidden;
   }
+  .icon a:hover {
+    border-bottom: none;
+  }
+/*applying responsive class
+-----------------------------*/
+
+ ul.topnav.responsive li {
+     display: block;
+     text-align: center;
+     margin-bottom: .5em;
+	 	overflow: hidden;
+
+ }
+ ul.topnav.responsive li a {
+   text-align: center;
+   	overflow: hidden;
+ }
+.container {
+  Width: 100%;
+  float: none;
+  	overflow: hidden;
+}
+
 }
