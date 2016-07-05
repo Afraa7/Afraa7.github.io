@@ -1,45 +1,49 @@
 <!DOCTYPE html>
-<html >
+<html>
   <head>
-    <meta charset="UTF-8">
-    <title>Afraa Tarafdar Website</title>
-     
-    <link rel="stylesheet" href="https://afraa7.github.io/css/style.css">
-	
-  </head>
-
+    <meta charset="utf-8">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://afraa7.github.io/css/style.css" media="screen">
   <body>
-
-    <div class="container">
-		<header class="page-header">
+  
+ 
+	<header class="page-header">
 			<div class="wrapper">
 			<!-- My Name at the top of the page -->
 				<h1 class="site-logo"><a href="#home"><span>Afraa</span>Tarafdar</a></h1>
+ 
+      <nav class="main-navigation navigation">
+        <ul class="topnav">
+          <li class="nav-item"><a href="#home">Home</a></li>
+          <li class="nav-item"><a href="#about">About me/Services</a></li>
+          <li class="nav-item"><a href="#portfolio">Portfolio</a></li>
+          <li class="nav-item"><a href="#interests">Interests</a></li>
+          <li class="nav-item"><a href="#contact">Get in touch</a></li>
+          <li class="icon">
+            <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-				<nav class="main-navigation navigation">
-					<!-- Navigation menu -->
-					<ul class="nav-menu">
-						<li class="nav-item current"><a href="#home">Home</a></li>
-						<li class="nav-item"><a href="#aboutme">About Me</a></li>
-						<li class="nav-item"><a href="#interests">Interests/Services</a></li>
-						<li class="nav-item"><a href="#portfolio">Portfolio</a></li>
-						<li class="nav-item"><a href="#contact">Get in touch</a></li>
-					</ul>
-				</nav>
-			</div><!-- .wrapper -->
-		</header><!-- .page-header -->
 
-		<!-- Home section -->
+    <!-- home section -->
 		<section id="home" class="section">
 
 			<div class="wrapper">
-				<p class="headlines">
-					<span>Developer & Designer</span>
+				<p class="headlines"> Developer
+					<span> & </span> Designer
 				</p>
 			</div>
-		</section><!-- #home -->
+		</section>
 		
-		<!-- About me section -->
+    <div class="container">
+    <!-- about me section -->
+
+   
+     
+	<!-- About me section -->
 		
 		<section id="aboutme" class="section">
 			<div class="wrapper">
@@ -52,8 +56,9 @@
 				</div>
 			</div>
 		</section><!-- #aboutme -->
-		
-		<!-- Interests/Services -->
+	
+
+	<!-- Interests/Services -->
 		<section id="interests" class="section">
 			<div class="wrapper">
 				<h1 class="section-title">Interests/Services</h1>
@@ -64,7 +69,9 @@
 			</div>
 		</section><!-- #service -->
 		
-		<!-- Portfolio Section -->
+		
+	
+    <!-- Portfolio Section -->
 		<section id="portfolio" class="section">
 			<div class="wrapper">
 				<h1 class="section-title">Portfolio</h1>
@@ -84,14 +91,14 @@
 				<h1 class="section-title">Get in touch</h1>
 
 				<div class="section-content">
-					<form action="" method="post">
+					<form action="MAILTO:afraa.tarafdar@gmail.com" method="post" enctype="text/plain">
 						<div class="top-section">
-						<fieldset style="border: 0;">
+							<fieldset style="border: 0;">
 								<label for="full-name">Full Name</label>
-								<input type="text" id="full-name" name="full-name" />
+								<input type="text" id="full-name" name="full-name" placeholder="full-name" />
 
 								<label for="email">Email</label>
-								<input type="email" id="email" />
+								<input type="email" id="email" placeholder="email" />
 							</fieldset>
 
 							<div class="contact-info">
@@ -100,18 +107,18 @@
 							</div>
 						</div>
 
-						<fieldset style="border: 0;">
+						<fieldset>
 							<label for="message">Message</label>
-							<textarea name="message" id="message" cols="30" rows="10"></textarea>
+							<textarea name="message" id="message" placeholder="message"cols="30" rows="10" ></textarea>
 						</fieldset>
 
-						<input type="submit" class="submit-button" value="Message" />
+						<input type="submit" class="submit-button" value="send" />
 					</form>
 				</div>
 			</div>
 		</section><!-- #contact -->
-
-		<!-- Footer section -->
+		
+				<!-- Footer section -->
 		<footer class="page-footer">
 			<div class="wrapper">
 				<nav class="footer-navigation navigation">
@@ -128,11 +135,19 @@
 			</div>
 		</footer><!-- .page-footer  -->
 	</div><!-- .page -->
-    
-        <script src="js/index.js"></script>
 
-    
-    
-    
+
+    <script>
+    function myFunction() {
+        document.getElementsByClassName("topnav")[0].classList.toggle("responsive");
+        style.cssText ="-webkit-transition: all 0.5s ease-in-out;";
+    }
+    </script>
+    <footer>
+      <p>
+        Layla Duale &copy 2016
+      </p>
+    </footer>
+
   </body>
 </html>
